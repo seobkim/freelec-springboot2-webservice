@@ -12,7 +12,7 @@ public class HelloController {
     // @RequestMapping(method = RequestMethod.get)으로 사용했었음.
     @GetMapping("/hello")
     public String hello(){
-        return "Hello";
+        return "hello";
     }
 
 }

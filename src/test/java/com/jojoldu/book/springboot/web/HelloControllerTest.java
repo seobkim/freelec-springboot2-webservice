@@ -38,7 +38,14 @@ public class HelloControllerTest {
         // MockMvc를 통해 /hello 주소로 HTTP GET 요청.
         // 옵셔널체이닝이 지원되어 아래와 같이 여러 검증 기능을 이어서 선언 가능
         mvc.perform(get("/hello"))
+                
+                // mvc.perform의 결과를 검증.
+                // HTTP header의 Status ( 200, 404 ,500 ) 등의 상태를 검증
+                // 여기선 OK 즉 200 인지 확인
                 .andExpect(status().isOk())
+
+                // mvc.perfrom 본문의 내용의 검증.
+                // Controller에서 "hello"를 리턴하기때문에 맞는지 검증
                 .andExpect(content().string(hello));
     }
 }
