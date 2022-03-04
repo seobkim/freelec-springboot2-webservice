@@ -30,4 +30,10 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile('org.springframework.boot:spring-boot-starter-mustache')
+
+    /* log4j 이슈 관련 */
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
 }

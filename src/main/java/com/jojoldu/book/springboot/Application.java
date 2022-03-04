@@ -2,6 +2,7 @@ package com.jojoldu.book.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 
 // 아래 어노테이션으로 인해 스프링 부트의 자동 설정, 스프링 Bean 읽기와 생성을 모두 자동으로 설정됨
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // 이렇게 되면 항상 서버에 톰캣을 설치할 필요가 없게 되고, 스프링부트로 만들어진 Jar 파일(실행 가능한 Java 패키징 파일)로 실행하면 됨
 // 꼭 스프링 부트에서만 내장 WAS를 사용할 수 있는 것은 아니지만, 언제 어디서나 같은 환경에서 스프링부트를 배포할 수 있기 때문에 내장 WAS를 사용하는 것을 권장함
 
+@EnableJpaAuditing
 @SpringBootApplication
 public class Application {
     public static void main(String[] args){
