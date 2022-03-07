@@ -1,3 +1,4 @@
+<!--실행시 태그 부분이 filename으로 지정된 다른 mustache 파일의 내용으로 변환-->
 {{>layout/header}}
     <h1>스프링 부트로 시작하는 웹 서비스</h1>
     <div class="col-md-12">
@@ -6,5 +7,25 @@
                 <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
             </div>
         </div>
+        <br>
+        <table class = "table table-horizontal table-bordered">
+            <thead>
+                <tr>
+                    <th>게시글 번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>최종 수정일</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+             <!--   <tr>
+                    <td>{{id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>-->
+            {{posts}}
+            </tbody>
+        </table>
     </div>
 {{>layout/footer}}
