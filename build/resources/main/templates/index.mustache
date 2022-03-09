@@ -18,10 +18,12 @@
                 </tr>
             </thead>
             <tbody id="tbody">
+            <!--posts 라는 리스트를 순회 / Java for문과 동일하게 생각-->
             {{#posts}}
                 <tr>
+                    <!--List에서 뽑아낸 객체의 필드를 사용-->
                     <td>{{id}}</td>
-                    <td>{{title}}</td>
+                    <td><a href="/posts/update/{{id}}">{{title}}</a></td>
                     <td>{{author}}</td>
                     <td>{{modifiedDate}}</td>
                 </tr>
