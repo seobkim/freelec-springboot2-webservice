@@ -1,3 +1,3 @@
 - Springboot2 와 AWS로 구현하는 웹서비스
 - Spring Data JPA 학습
-- Enum class , Oauth2 학습할 것
+- Enum class , Oauth2 , Optinal class 학습할 것
