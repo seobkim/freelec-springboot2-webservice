@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.config.auth;
 
+import com.jojoldu.book.springboot.config.auth.dto.OAuthAttributes;
 import com.jojoldu.book.springboot.domain.user.User;
 import com.jojoldu.book.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,7 +41,8 @@ public class CustomOauth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         // OAuth2UserService를 통해 가져온 OAuth2User의 attribute를 담을 클래스.
         // 이후 다른 소셜 로그인도 이 클래스를 사용
-        OAuthAttributes attributes = OauthAttributes.of(registrationId,userNameAttributeName,oAuth2User.getAttributes());
+
+        OAuthAttributes attributes = OAuthAttributes.of(registrationId,userNameAttributeName,oAuth2User.getAttributes());
 
         User user = saveOrUpdate(attributes);
 
