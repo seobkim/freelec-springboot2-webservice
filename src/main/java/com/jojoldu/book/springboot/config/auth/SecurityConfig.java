@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final CustomOauth2UserService customOauth2UserService;
+    private final CustomOAuth2UserService customOauth2UserService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception{
@@ -31,7 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     // 권한 관리 대사을 지정하는 옵션 / URL,HTTP 메소드별로 관리 가능
                     // "/" 등 지정된 URL 들은 permitAll()옵션을 통해 전체 열람 권한 할당
                     // "/api/v1/**" 주소를 가진 API는 User 권한을 가진사람만 가능하도록 할당
-                    .antMatchers("/","/css/**,","images/**","/js/**","/h2-console/**").permitAll()
+                    .antMatchers("/","/css/**,","images/**","/js/**","/h2-console/**","/profile").permitAll()
                     .antMatchers("/api/v1/**").hasRole(Role.USER.name())
                 
                     // anyRequest 
