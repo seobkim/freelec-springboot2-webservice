@@ -40,7 +40,9 @@ dependencies {
 
     // spring-session-jdbc 의존성
     compile('org.springframework.session:spring-session-jdbc')
-    
+
+    // 스프링 시큐리티 테스트를 위한 여러 도구를 지원하는 의존성
+    testCompile('org.springframework.security:spring-security-test')
     
     /* log4j 이슈 관련 */
     implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
