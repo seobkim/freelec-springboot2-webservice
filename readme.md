@@ -6,3 +6,7 @@
 
 
 - @springBootTest, @WebMvcTest 차이
+
+
+
+- 진행상황 RDS DB 다시 셋팅할것!
