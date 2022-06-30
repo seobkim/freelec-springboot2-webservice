@@ -61,6 +61,7 @@ echo "> JAR Name : $JAR_NAME"
 # 일반적으로 자바를 실행할 때는 java -jar 라는 명령어를 사용하지만, 이렇게 하면 사용자가 터미널
 # 접속을 끊을 때 애플리케이션도 같이 종료됨
 # 애플리케이션 실행자가 터미널을 종료해도 애플리케이션은 계속 구동될 수 있도록 nohup 명령어를 사용
-nohup java -jar |
-  -Dspring.config.location=classpath:/application.properties,
-  /home/ec2-user/app/application-oauth.properties | $REPOSITORY/$JAR_NAME 2>&1 &
+# !!!백슬래시시는 줄바꿈 시 같은 라인인걸 표현!!!
+nohup java -jar \
+  -Dspring.config.location=classpath:/application.properties,/home/ec2-user/app/application-oauth.properties \
+  $REPOSITORY/$JAR_NAME 2>&1 &
