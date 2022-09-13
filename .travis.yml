@@ -17,7 +17,7 @@ cache:
     - '$HOME/.gradle'
 
 # master 브랜치에 푸시되었을 때 수행하는 명령어
-script: "./gradlew clean build"
+script: "chomod +x ./gradlew clean build"
 
 # CI 실행 완료 시 메일로 알림
 notifications:
