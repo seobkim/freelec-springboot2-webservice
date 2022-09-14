@@ -21,12 +21,6 @@ before_install:
 # master 브랜치에 푸시되었을 때 수행하는 명령어
 script: "./gradlew clean build"
 
-# CI 실행 완료 시 메일로 알림
-notifications:
-  email:
-    recipients:
-      - kks7824@gmail.com
-
 before_deploy:
   - zip -r freelec-springboot2-webservice
   - mkdir -p deploy
@@ -42,3 +36,9 @@ deploy:
     acl: private # zip 파일 접근을 private으로
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
+
+# CI 실행 완료 시 메일로 알림
+notifications:
+  email:
+    recipients:
+      - kks7824@gmail.com
