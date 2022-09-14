@@ -22,7 +22,6 @@ before_install:
 script: "./gradlew clean build"
 
 before_deploy:
-  - ls -al
   - zip -r freelec-springboot2-webservice.zip ./*
   - mkdir -p deploy
   - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
