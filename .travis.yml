@@ -41,7 +41,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: freelec-springboot-build-file
-    key: freelec-springboot-webservice.zip # 빌드 파일을 압축해서 전달
+    key: freelec-springboot2-webservice.zip # 빌드 파일을 압축해서 전달
     bundle-type: zip
     application: freelec-springboot2-webservice # 웹 콘솔에서 등록한 codeDeploy 애플리케이션
     deployment-group: freelec-springboot2-werbservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
